@@ -1,0 +1,130 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Products Section with Animation -->
+<section class="products-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Products</h2>
+        <div class="product-slider">
+            <div class="product-track">
+                <div class="product-card">
+                    <img src="{% static 'images/product1.jpg' %}" alt="Vesla Basic Monitor" class="img-fluid rounded" width="500" height="300">
+                    <div class="product-info mt-3">
+                        <h4>Vesla Basic</h4>
+                        <p class="text-muted">Essential water quality monitoring</p>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/product2.jpg' %}" alt="Vesla Pro Monitor" class="img-fluid rounded" width="500" height="300">
+                    <div class="product-info mt-3">
+                        <h4>Vesla Pro</h4>
+                        <p class="text-muted">Advanced multi-parameter analysis</p>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/product3.jpg' %}" alt="Vesla Enterprise Solution" class="img-fluid rounded" width="500" height="300">
+                    <div class="product-info mt-3">
+                        <h4>Vesla Enterprise</h4>
+                        <p class="text-muted">Industrial-grade monitoring</p>
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blogs Section -->
+<section class="blogs-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Latest Water Quality Insights</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{% static 'images/blog1.jpg' %}" class="card-img-top" alt="Water Quality Blog">
+                    <div class="card-body">
+                        <h5 class="card-title">Understanding Water pH Levels</h5>
+                        <p class="card-text">Learn how pH affects water quality and health implications.</p>
+                        <a href="https://watersciencehub.com/ph-in-water/" class="btn btn-link ps-0" target="_blank">Read Blog →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{% static 'images/blog2.jpg' %}" class="card-img-top" alt="TDS Monitoring">
+                    <div class="card-body">
+                        <h5 class="card-title">TDS in Drinking Water</h5>
+                        <p class="card-text">Everything you need to know about Total Dissolved Solids.</p>
+                        <a href="https://www.epa.gov/ground-water-and-drinking-water/table-regulated-drinking-water-contaminants" class="btn btn-link ps-0" target="_blank">Read Blog →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="{% static 'images/blog3.jpg' %}" class="card-img-top" alt="IoT Water Monitoring">
+                    <div class="card-body">
+                        <h5 class="card-title">IoT for Water Safety</h5>
+                        <p class="card-text">How smart technology is revolutionizing water monitoring.</p>
+                        <a href="https://webbylab.com/blog/iot-in-water-management" class="btn btn-link ps-0" target="_blank">Read Blog →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Products Slider Animation */
+    .product-slider {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .product-track {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: calc(250px * 6);
+    }
+    
+    .product-card {
+        width: 250px;
+        margin: 0 15px;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 3)); }
+    }
+    
+    /* Blog Cards */
+    .blogs-section .card {
+        transition: all 0.3s ease;
+    }
+    
+    .blogs-section .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .blogs-section .btn-link {
+        text-decoration: none;
+        color: var(--bs-primary);
+    }
+    
+    .blogs-section .btn-link:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}

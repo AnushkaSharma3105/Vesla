@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section (no navigation) -->
+<section class="hero-section" style="background-image: url('{% static 'images/hero-bg.jpg' %}'); background-size: cover; background-position: center; height: 60vh;">
+    <div class="container text-center py-5">
+        <h1 class="display-3 fw-bold mb-4">Welcome to Vesla</h1>
+        <p class="lead mb-5" style="font-weight: bold; color: black;">Smart IoT-based water quality monitoring system</p>
+        <a href="{% url 'products' %}" class="btn btn-primary btn-lg px-4">Explore Products</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-water fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Real-time Monitoring</h3>
+                        <p class="text-muted">24/7 water quality tracking with instant alerts</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Data Analytics</h3>
+                        <p class="text-muted">Historical trends and water quality reports</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <i class="fas fa-bell fa-3x text-primary mb-3"></i>
+                        <h3 class="h4">Smart Alerts</h3>
+                        <p class="text-muted">Notifications for unsafe water conditions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
