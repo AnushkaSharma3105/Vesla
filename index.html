@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Vesla - Home</title>
+<link rel="stylesheet" href="css/styles.css">
+  <style>
+
+        video{
+           position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* negative value pushes the video behind everything whereas positive value does opposite*/
+        }
+
+    </style>
+</head>
+<body>
+  <video autoplay loop muted plays-inline>
+            <source src="water video.mp4" type="video/mp4">
+        </video> 
+<header>
+  <div><strong>Vesla</strong></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Welcome to Vesla</h1>
+  <p>Smart IoT water quality monitoring system.</p>
+  <div class="card"><h2>Features</h2>
+    <ul>
+      <li>Real-time monitoring via USB</li>
+      <li>Dashboard with charts and alerts</li>
+      <li>Future-ready Firebase integration</li>
+      <li>Insights page for long-term trends</li>
+    </ul>
+  </div><br>
+  <button onclick="window.location.href='dashboard.html'">Launch Dashboard</button>
+</div><footer style="margin-top: 138px;">© Vesla 2025 | Smart Water Quality Monitoring</footer>
+</body>
+</html>

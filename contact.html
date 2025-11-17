@@ -1,0 +1,39 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>Contact</title>
+<link rel="stylesheet" href="css/styles.css">
+  <style>
+    input, textarea{
+      width: 400px;
+      height: 30px;
+      font-size: 17px;
+    }
+
+    textarea{
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div><strong>Vesla</strong></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Contact Us</h1>
+  <form id="contactForm" class="card">
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+    <input type="email" id="email" placeholder="Your Email" required><br><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send</button>
+    <p id="formMsg"></p>
+  </form>
+</div><footer style="margin-top: 230px;">© Vesla 2025 | Smart Water Quality Monitoring</footer>
+<script src="js/contact.js"></script>
+</body>
+</html>
